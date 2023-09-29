@@ -1,4 +1,4 @@
-import moment from "moment";
+import { DateTime } from "luxon";
 
 export const FORMATS = {
   DATE: "date",
@@ -6,6 +6,8 @@ export const FORMATS = {
   TIME: "time",
   DATETIME: "datetime",
 };
+
+const TUCSON_TZ = "America/Phoenix";
 
 export function wrapValue(value, format) {
   switch (format) {
@@ -24,11 +26,11 @@ export function formatValue(value, format) {
   }
   switch (format) {
     case FORMATS.DATE:
-      return moment(value).format("ll");
+      return DateTime.fromISO(value).setZone(TUCSON_TZ).toLocaleString();
     case FORMATS.TIME:
-      return moment(value).format("LT");
+      return DateTime.fromISO(value).setZone(TUCSON_TZ).toLocaleString(DateTime.TIME_SIMPLE);
     case FORMATS.DATETIME:
-      return moment(value).format("lll");
+      return DateTime.fromISO(value).setZone(TUCSON_TZ).toLocaleString(DateTime.DATETIME_MED);
     default:
       return value;
   }

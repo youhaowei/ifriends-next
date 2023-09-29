@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import moment from "moment";
 import { FaMapMarked, FaPhone, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import FacebookButton from "../Button/facebook";
 import GithubButton from "../Button/github";
 import InstagramButton from "../Button/instagram";
+import { DateTime } from "luxon";
 
 const Address = () => (
   <>
@@ -99,7 +99,7 @@ const Footer = ({ menuItems }) => (
         <Col>
           <p className="copyright">
             &copy;
-            {` ${moment().year()} International Friends, Inc. All Rights
+            {` ${DateTime.now().year} International Friends, Inc. All Rights
 						Reserved. Web Design by `}
             <a href="https://webreview.octaviamedia.com/">
               Octavia Digital Media
