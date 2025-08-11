@@ -36,7 +36,7 @@ const Email = () => (
       <span>Email Address</span>
     </h6>
     <p>
-      <a href="">info@ifriendstucson.org</a>
+      <a href="mailto:info@ifriendstucson.org">info@ifriendstucson.org</a>
     </p>
   </>
 );
