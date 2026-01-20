@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 30% 97%;
+    --foreground: 30 15% 18%;
+
+    --card: 35 25% 95%;
+    --card-foreground: 30 15% 18%;
+
+    --popover: 35 30% 97%;
+    --popover-foreground: 30 15% 18%;
+
+    --primary: 18 65% 45%;
+    --primary-foreground: 35 30% 97%;
+
+    --secondary: 35 20% 90%;
+    --secondary-foreground: 30 15% 25%;
+
+    --muted: 35 15% 92%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 175 25% 40%;
+    --accent-foreground: 35 30% 97%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --highlight: 45 85% 60%;
+    --highlight-foreground: 30 15% 15%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 18 65% 45%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-in-delayed {
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+  }
+
+  .wave-divider-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .wave-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 font-display font-semibold uppercase tracking-wide;
+  }
+
+  .btn-highlight {
+    @apply bg-highlight text-highlight-foreground hover:bg-highlight/90 font-display font-semibold uppercase tracking-wide;
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+.prose {
+  @apply text-foreground;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply font-display text-foreground;
+}
+
+.prose a {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+.prose ul {
+  @apply list-disc pl-6 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 space-y-2;
+}
+
+.prose li {
+  @apply leading-relaxed;
+}
+
+.prose p {
+  @apply mb-4 last:mb-0;
+}
+
+.prose strong {
+  @apply font-semibold;
+}
