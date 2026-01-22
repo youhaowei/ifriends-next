@@ -1,10 +1,11 @@
 import Image from "next/image";
+import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SignupDialog } from "@/components/features/signup-dialog";
 
 interface HeroBannerProps {
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   imageSrc: string;
   imageAlt?: string;
