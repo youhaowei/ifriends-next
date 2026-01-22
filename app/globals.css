@@ -142,22 +142,6 @@
     z-index: 1;
   }
 
-  /* Decorative line accent */
-  .accent-line {
-    position: relative;
-  }
-
-  .accent-line::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -0.5rem;
-    width: 3rem;
-    height: 3px;
-    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--gold)));
-    border-radius: 2px;
-  }
-
   /* Glow effect for images */
   .image-glow {
     position: relative;
@@ -248,14 +232,7 @@
     @apply bg-highlight text-highlight-foreground hover:bg-highlight/90 font-display font-semibold uppercase tracking-wide;
   }
 
-  /* Force display optical size for Fraunces in buttons */
-  button,
-  [role="button"],
-  .btn-primary,
-  .btn-highlight {
-    font-optical-sizing: none;
-    font-variation-settings: "opsz" 72, "WONK" 1;
-  }
+
 
   .link-underline {
     @apply relative inline-block;

@@ -91,19 +91,6 @@ Students and hosts get together at least once a month over the course of a year.
             />
           </div>
 
-          <div className="mb-16">
-            <h3 className="text-xl font-display font-semibold mb-4 text-center">
-              Listen to Our Podcast
-            </h3>
-            <iframe
-              className="w-full rounded-xl"
-              src="https://open.spotify.com/embed/episode/4XIcCwshH1jtjr6a7IBHVW?utm_source=generator&theme=0"
-              height="352"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
-          </div>
-
           <div className="mb-20">
             <h2 className="text-3xl font-display font-bold text-center mb-12">
               What Our Students Say

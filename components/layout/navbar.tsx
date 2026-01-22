@@ -54,11 +54,14 @@ export function Navbar() {
             className="flex items-center transition-opacity hover:opacity-80"
           >
             <Image
-              src={useLightTheme ? "/logos/logo.svg" : "/logos/logo-white.svg"}
+              src="/logos/logo.svg"
               alt="International Friends"
               width={240}
               height={44}
-              className="h-11 w-[220px] object-contain object-left"
+              className={cn(
+                "h-11 w-[220px] object-contain object-left transition-all duration-150",
+                !useLightTheme && "brightness-0 invert"
+              )}
               priority
             />
           </Link>
@@ -85,7 +88,14 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="outline" size="sm" asChild>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className={cn(
+                !useLightTheme && "border-white/70 text-white hover:bg-white/10 hover:text-white hover:border-white"
+              )}
+              asChild
+            >
               <a
                 href="https://donorbox.org/ongoing-support-for-international-friends"
                 target="_blank"

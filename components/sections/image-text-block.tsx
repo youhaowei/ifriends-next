@@ -85,11 +85,9 @@ export function ImageTextBlock({
               </div>
             )}
             
-            <div className="accent-line">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold pt-4 mb-6 text-foreground leading-tight">
-                {title}
-              </h2>
-            </div>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-6 text-foreground leading-tight">
+              {title}
+            </h2>
             
             <div className="prose prose-lg max-w-none text-foreground/75 mb-8 leading-relaxed">
               <ReactMarkdown>{content}</ReactMarkdown>
@@ -99,7 +97,7 @@ export function ImageTextBlock({
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="group/btn border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-300" 
+                className="group/btn border-primary/30 hover:border-primary hover:bg-primary/5 hover:text-primary transition-all duration-300" 
                 asChild
               >
                 <Link href={action.href}>

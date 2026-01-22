@@ -28,7 +28,7 @@ export function FAQAccordion({ items, className }: FAQAccordionProps) {
             {item.question}
           </AccordionTrigger>
           <AccordionContent>
-            <div className="prose prose-sm max-w-none text-muted-foreground">
+            <div className="prose prose-sm max-w-none text-foreground/80">
               <ReactMarkdown>{item.answer}</ReactMarkdown>
             </div>
           </AccordionContent>

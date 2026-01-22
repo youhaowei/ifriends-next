@@ -140,7 +140,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        display: ["var(--font-libre-baskerville)", "Georgia", "serif"],
         body: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
       },
       keyframes: {

@@ -7,7 +7,12 @@ export default function HomePage() {
   return (
     <>
       <HeroBanner
-        title="Every Student Needs a Sense of Home"
+        title={
+          <>
+            Every Student <span className="text-gold block">Deserves</span> a
+            Sense of Home
+          </>
+        }
         subtitle="International Friends brings together international students and Tucson community members to build lasting friendships and cultural understanding."
         imageSrc="/images/home_header1.jpeg"
         imagePosition="top"
@@ -100,7 +105,7 @@ export default function HomePage() {
 
       <CTASection
         title="Get Involved"
-        description="Make a 'world of difference' in the lives of international students and local hosts. It's fun, it's easy, and it changes lives."
+        description={'Make a "world of difference" in the lives of international students and local hosts. It\'s fun, it\'s easy, and it changes lives.'}
       />
     </>
   );

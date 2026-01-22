@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from "next/font/google";
+import { Libre_Baskerville, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
-const fraunces = Fraunces({
+const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces",
-  axes: ["opsz", "WONK", "SOFT"],
+  variable: "--font-libre-baskerville",
+  weight: ["400", "700"],
 });
 
 const dmSans = DM_Sans({
@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${libreBaskerville.variable} ${dmSans.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
