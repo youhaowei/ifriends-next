@@ -9,7 +9,7 @@ export default function HomePage() {
       <HeroBanner
         title={
           <>
-            Every Student <span className="text-gold block">Deserves</span> a
+            Every Student <span className="text-accent block">Deserves</span> a
             Sense of Home
           </>
         }
@@ -18,9 +18,16 @@ export default function HomePage() {
         imagePosition="top"
       />
 
-      <section className="section-padding">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <section className="section-padding bg-background">
+        <div className="container-editorial">
+          <div className="text-center mb-16">
+            <span className="editorial-caption text-accent mb-4 block">Our Mission</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight max-w-4xl mx-auto leading-[1.05]">
+              Building bridges between cultures since 1952
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <TextBlock
               title="Who We Are"
               content="International Friends provides opportunities for international students and local hosts to develop close friendships and an understanding of and appreciation for each other's cultures. We offer activities through which international students may participate in the life of the community."
@@ -33,16 +40,20 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="mt-12 lg:mt-16">
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <iframe
-                className="w-full h-full"
-                allow="autoplay"
-                allowFullScreen
-                src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all"
-                title="International Friends Video"
-              />
+          <div className="mt-20 lg:mt-28">
+            <div className="relative">
+              <div className="absolute -inset-2 bg-accent/10 -z-10" style={{ transform: 'translate(12px, 12px)' }} />
+              <div className="aspect-video overflow-hidden">
+                <iframe
+                  className="w-full h-full"
+                  allow="autoplay"
+                  allowFullScreen
+                  src="https://arizona.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=06dd0cd1-402e-4042-bd61-abf8013f6212&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all"
+                  title="International Friends Video"
+                />
+              </div>
             </div>
+            <p className="editorial-caption text-center mt-6 text-muted-foreground">Watch our story</p>
           </div>
         </div>
       </section>

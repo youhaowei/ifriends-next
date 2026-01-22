@@ -3,6 +3,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SignupDialog } from "@/components/features/signup-dialog";
+import { ArrowRight } from "lucide-react";
 
 interface HeroBannerProps {
   title: React.ReactNode;
@@ -25,7 +26,7 @@ export function HeroBanner({
 }: HeroBannerProps) {
   return (
     <section
-      className={cn("relative min-h-[70vh] flex items-center", className)}
+      className={cn("relative min-h-screen flex items-center", className)}
     >
       <div className="absolute inset-0 z-0">
         <Image
@@ -37,36 +38,39 @@ export function HeroBanner({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/50 to-foreground/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-foreground/20" />
       </div>
 
-      <div className="absolute inset-0 overflow-hidden z-0">
-        <div
-          className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary/20 blur-3xl animate-float"
-          style={{ animationDelay: "0s" }}
-        />
-        <div
-          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-warm-400/15 blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-sand-300/20 blur-2xl animate-float"
-          style={{ animationDelay: "4s" }}
-        />
+      <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+        <div className="absolute top-[10%] right-[5%] w-[400px] h-[400px] rounded-full bg-accent/15 blur-[100px]" />
+        <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] rounded-full bg-primary/10 blur-[80px]" />
       </div>
 
-      <div className="container-wide relative z-10 py-32 pt-40">
-        <div className="max-w-3xl">
+      <div className="absolute top-0 left-0 w-full h-full z-[1] pointer-events-none">
+        <div className="absolute top-8 left-8 md:top-12 md:left-12 flex items-center gap-3">
+          <div className="w-12 h-[1px] bg-background/40" />
+          <span className="editorial-caption text-background/60">Est. 1952</span>
+        </div>
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-12 -rotate-90 origin-center">
+          <span className="editorial-caption text-background/40">Tucson, Arizona</span>
+        </div>
+      </div>
+
+      <div className="container-wide relative z-10 py-32 pt-44">
+        <div className="max-w-4xl">
+          <div className="mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "0s" }}>
+            <span className="editorial-caption text-accent">International Friends</span>
+          </div>
           <h1
-            className="text-background font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 animate-fade-in"
+            className="text-background font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-8 opacity-0 animate-fade-in tracking-tight"
             style={{ animationDelay: "0.1s" }}
           >
             {title}
           </h1>
           {subtitle && (
             <p
-              className="text-background/90 text-lg md:text-xl max-w-2xl leading-relaxed mb-8 opacity-0 animate-fade-in"
+              className="text-background/80 text-xl md:text-2xl max-w-2xl leading-relaxed mb-10 opacity-0 animate-fade-in font-light"
               style={{ animationDelay: "0.3s" }}
             >
               {subtitle}
@@ -74,39 +78,29 @@ export function HeroBanner({
           )}
           {showCTA && (
             <div
-              className="flex flex-wrap gap-4 opacity-0 animate-fade-in"
+              className="flex flex-wrap items-center gap-6 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.5s" }}
             >
               <SignupDialog>
-                <Button size="xl" variant="highlight">
+                <Button size="xl" className="bg-accent hover:bg-accent/90 text-accent-foreground font-display font-semibold uppercase tracking-widest text-sm px-8 h-14">
                   Join Us Today
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </SignupDialog>
-              <Button
-                size="xl"
-                variant="outline"
-                className="border-background/50 text-background hover:bg-background hover:text-foreground"
-                asChild
+              <a 
+                href="/about" 
+                className="btn-editorial text-background/90 hover:text-background"
               >
-                <a href="/about">Learn More</a>
-              </Button>
+                Learn More
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           )}
         </div>
       </div>
 
-      <div className="wave-divider z-10">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8c53.77-8.29,108.88-17.71,163.22-29.14C213.45,56.86,265.94,68.46,321.39,56.44Z"
-            className="fill-background"
-          />
-        </svg>
+      <div className="absolute bottom-0 left-0 right-0 z-10">
+        <div className="h-32 bg-gradient-to-t from-background via-background/80 to-transparent" />
       </div>
     </section>
   );
