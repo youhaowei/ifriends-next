@@ -77,6 +77,7 @@ export default function JoinPage() {
       <HeroBanner
         title="Build Lasting Friendships"
         imageSrc="/images/join_header.png"
+        imagePosition="top"
         showCTA={false}
       />
 

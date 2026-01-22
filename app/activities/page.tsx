@@ -15,6 +15,7 @@ export default function ActivitiesPage() {
       <HeroBanner
         title="Enjoy Activities Throughout the Year"
         imageSrc="/images/activities_header.png"
+        imagePosition="top"
         showCTA={false}
       />
 

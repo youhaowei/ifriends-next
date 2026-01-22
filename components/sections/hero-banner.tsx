@@ -8,6 +8,7 @@ interface HeroBannerProps {
   subtitle?: string;
   imageSrc: string;
   imageAlt?: string;
+  imagePosition?: string;
   showCTA?: boolean;
   className?: string;
 }
@@ -17,6 +18,7 @@ export function HeroBanner({
   subtitle,
   imageSrc,
   imageAlt = "Banner image",
+  imagePosition = "center",
   showCTA = true,
   className,
 }: HeroBannerProps) {
@@ -30,6 +32,7 @@ export function HeroBanner({
           alt={imageAlt}
           fill
           className="object-cover"
+          style={{ objectPosition: imagePosition }}
           priority
           sizes="100vw"
         />
@@ -43,8 +46,12 @@ export function HeroBanner({
           style={{ animationDelay: "0s" }}
         />
         <div
-          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-highlight/10 blur-3xl animate-float"
+          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-warm-400/15 blur-3xl animate-float"
           style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-sand-300/20 blur-2xl animate-float"
+          style={{ animationDelay: "4s" }}
         />
       </div>
 

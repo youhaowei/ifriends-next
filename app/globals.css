@@ -28,8 +28,11 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --highlight: 45 85% 60%;
-    --highlight-foreground: 30 15% 15%;
+    --highlight: 78 62% 67%;
+    --highlight-foreground: 78 50% 15%;
+
+    --gold: 38 75% 55%;
+    --gold-foreground: 38 80% 10%;
 
     --border: 35 15% 88%;
     --input: 35 15% 88%;
@@ -93,6 +96,38 @@
     animation: fade-in 0.6s ease-out forwards;
   }
 
+  .animate-slide-up {
+    opacity: 0;
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-scale-in {
+    opacity: 0;
+    animation: scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   .grain {
     position: relative;
   }
@@ -105,6 +140,53 @@
     opacity: 0.03;
     pointer-events: none;
     z-index: 1;
+  }
+
+  /* Decorative line accent */
+  .accent-line {
+    position: relative;
+  }
+
+  .accent-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--gold)));
+    border-radius: 2px;
+  }
+
+  /* Glow effect for images */
+  .image-glow {
+    position: relative;
+  }
+
+  .image-glow::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--highlight) / 0.1));
+    border-radius: 2rem;
+    filter: blur(40px);
+    z-index: -1;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px hsl(var(--foreground) / 0.15);
+  }
+
+  /* Section divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
   }
 
   .wave-divider {
@@ -164,6 +246,15 @@
 
   .btn-highlight {
     @apply bg-highlight text-highlight-foreground hover:bg-highlight/90 font-display font-semibold uppercase tracking-wide;
+  }
+
+  /* Force display optical size for Fraunces in buttons */
+  button,
+  [role="button"],
+  .btn-primary,
+  .btn-highlight {
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 72, "WONK" 1;
   }
 
   .link-underline {

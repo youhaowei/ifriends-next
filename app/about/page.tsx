@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { HeroBanner } from "@/components/sections/hero-banner";
 import { TextBlock } from "@/components/sections/text-block";
 import { TestimonialCard } from "@/components/sections/testimonial-card";
@@ -71,6 +70,7 @@ export default async function AboutPage() {
       <HeroBanner
         title="Learn About Each Other's Culture"
         imageSrc="/images/about-header.jpeg"
+        imagePosition="top"
         showCTA={false}
       />
 

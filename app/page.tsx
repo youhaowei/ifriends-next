@@ -10,6 +10,7 @@ export default function HomePage() {
         title="Every Student Needs a Sense of Home"
         subtitle="International Friends brings together international students and Tucson community members to build lasting friendships and cultural understanding."
         imageSrc="/images/home_header1.jpeg"
+        imagePosition="top"
       />
 
       <section className="section-padding">
