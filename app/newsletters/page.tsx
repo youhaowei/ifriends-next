@@ -21,7 +21,7 @@ export default async function NewslettersPage() {
     <div className="pt-32 pb-20 min-h-screen">
       <div className="container-wide">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+<h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Newsletters
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl">

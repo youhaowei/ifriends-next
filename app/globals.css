@@ -232,8 +232,6 @@
     @apply bg-highlight text-highlight-foreground hover:bg-highlight/90 font-display font-semibold uppercase tracking-wide;
   }
 
-
-
   .link-underline {
     @apply relative inline-block;
   }

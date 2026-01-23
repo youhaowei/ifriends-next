@@ -176,7 +176,14 @@ export function Footer() {
           </p>
           <p className="flex items-center gap-1">
             Web Design by{" "}
-            <span className="text-background/60 hover:text-warm-300 transition-colors cursor-default font-normal">Youhao Wei</span>
+            <a
+              href="https://youhao.me"
+              className="text-background/60 hover:text-warm-300 transition-colors font-normal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Youhao Wei
+            </a>
           </p>
         </div>
       </div>
