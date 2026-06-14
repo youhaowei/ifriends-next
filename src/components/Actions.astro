@@ -47,13 +47,15 @@ const { actions = [], defaultVariant = "primary", defaultLabel } = Astro.props;
         </>
       );
     }
-    // text-* variant → borderless TextButton (master's TextBlock readmore)
+    // text-* variant → borderless TextButton (master's TextBlock readmore).
+    // readmore shows a trailing arrow, matching the live site.
     if (typeof variant === "string" && variant.startsWith("text-")) {
       return (
         <TextButton
           href={action.href}
           type={variant.split("-")[1]}
           label={label}
+          icon={action.type === "readmore" || action.type === undefined}
         />
       );
     }

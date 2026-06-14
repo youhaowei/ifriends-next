@@ -134,11 +134,17 @@ const html = renderMarkdown(content);
     object-fit: cover;
   }
 
-  /* The centered container that positions the text column. Pointer-events
-     pass through so the absolute image underneath stays interactive. */
+  /* The centered container that positions the text column. The original
+     site nested a Bootstrap .row inside .container so the text content
+     started ~10px in from the container edge at every width. Our
+     container-if defaults to 25px padding; override it to a 10px gutter
+     here so the text column matches the original (490px @ 1280 desktop,
+     355px @ 375 mobile). */
   .textRow {
     position: relative;
     height: 800px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @media (min-width: 850px) {
     .textRow {
@@ -146,11 +152,10 @@ const html = renderMarkdown(content);
     }
   }
 
-  /* Text column — Bootstrap col md=6 with offset on non-invert.
-     Sits on the half of the *container* opposite the image. */
+  /* Text column — Bootstrap col-md-6 with offset on non-invert. */
   .textCol {
     height: 400px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     overflow-y: auto;
     display: flex;
     flex-direction: column;

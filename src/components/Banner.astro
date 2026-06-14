@@ -53,7 +53,8 @@ const { message = "Banner Message", image } = Astro.props;
   }
   .banner-inner h1 {
     color: #212529;
-    font-size: 40px;
+    /* Bootstrap RFS h1 — matches the live banner (40px desktop → ~27.6px @375). */
+    font-size: min(2.5rem, calc(1.375rem + 1.5vw));
     margin: 0 0 0.5rem; /* match master h1 margin-bottom for identical centering */
   }
 

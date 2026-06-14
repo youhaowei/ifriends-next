@@ -65,17 +65,22 @@
     line-height: 1.2;
     margin-bottom: 0.5rem;
   }
+  /* Responsive font sizes — reproduce Bootstrap 4's RFS (the original site
+     had $enable-responsive-font-sizes: true). Headings scale down with the
+     viewport below ~1200px and cap at their full rem size above it. The
+     calc() values match Bootstrap's RFS output exactly (verified against
+     the live site at 375–1440px). min() applies the cap. */
   h1 {
-    font-size: 2.5rem;
+    font-size: min(2.5rem, calc(1.375rem + 1.5vw));
   }
   h2 {
-    font-size: 2rem;
+    font-size: min(2rem, calc(1.325rem + 0.9vw));
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: min(1.75rem, calc(1.3rem + 0.6vw));
   }
   h4 {
-    font-size: 1.5rem;
+    font-size: min(1.5rem, calc(1.275rem + 0.3vw));
   }
   h5 {
     font-size: 1.25rem;
