@@ -58,8 +58,8 @@ const isActive = (route: string) =>
               <a
                 href={item.route}
                 class:list={[
-                  "block font-heading px-3 py-2 text-white/75 hover:text-white",
-                  { "font-bold text-white": isActive(item.route) },
+                  "block font-heading px-3 py-2 text-white/50 hover:text-white",
+                  { "font-bold !text-white": isActive(item.route) },
                 ]}
               >
                 {item.label}
