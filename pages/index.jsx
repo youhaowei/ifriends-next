@@ -108,7 +108,7 @@ Read how International Friends connects international students with local hosts 
             actions: [{ type: "donate" }],
             content: `
 * Donate to support International Friends’ mission and our events, programs, and activities
-* Help pay for event space rental costs, supplies, food for picnics, and other events
+* Help pay for event space rental costs, supplies, and other special-event expenses
 * Assist with website, listserv, marketing, and organizational costs
 * Help defray the cost of printed materials, such as brochures, guidelines, newsletters, and banners
 * Contribute to fund important situational expenses like a video for student orientations and a new PA system for events and activities

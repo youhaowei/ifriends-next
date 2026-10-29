@@ -68,9 +68,9 @@ International Friends became an Arizona corporation in 2004 and also received of
             headerAlign: "center",
             textAlign: "justify",
             content: `
-International Friends sponsors a “welcome picnic” event each Fall and Spring Terms for participating students and hosts. At these events held at a local park, we describe our program, welcome new participants, enjoy delicious food and drinks, participate in ‘competitive fun’ games and group dances, and engage in casual conversation to get to know each other better.
+International Friends currently brings students and hosts together through special events, such as tours of the Tucson Museum of Art, the UA Museum of Art, and the Gem and Mineral Museum. Our traditional organization-sponsored picnics are on hold for now.
 
-Students and hosts get together at least once a month over the course of a year.  Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals.  International Friends also organizes picnics and other fun events during the school year that all are welcome to attend.
+Students and hosts get together at least once a month over the course of a year.  Activities can range from special events like holiday celebrations, sightseeing trips, and hiking outings, to everyday activities like shopping and sharing meals.
 
 While the students’ and hosts’ matched relationships officially end after one year, lifelong friendships and connections are often formed with hosts, students, and the students’ families back home.  Many have found their lives immeasurably enriched by these friendships.
 

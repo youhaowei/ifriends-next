@@ -19,15 +19,15 @@ export const getStaticProps = async () => {
         {
           title: "ORGANIZED ACTIVITIES FOR STUDENTS AND HOSTS",
           content:
-            "While most activities shared by hosts and students are planned by them on an individual basis, International Friends sponsors two yearly group activities that all are welcome to attend.  We also organize one or two special events each semester, visiting local attractions such as the Southern Arizona Heritage and Visitor Center, the Biosphere, and the Arizona Sonora Desert Museum.",
+            "While most activities shared by hosts and students are planned by them on an individual basis, International Friends currently focuses on special events, such as tours of the Tucson Museum of Art, the UA Museum of Art, and the Gem and Mineral Museum. Our traditional organization-sponsored picnics are on hold for now.",
           headerAlign: "center",
           textAlign: "justify",
         },
         [
           {
-            title: "FALL PICNIC",
+            title: "PAST FALL PICNICS",
             content:
-              "International Friends sponsors a fall picnic, usually in late September, for students and hosts. Everyone on our email list is invited to come.",
+              "International Friends previously held fall picnics for students and hosts to meet and get to know one another. These gatherings are part of our history; organization-sponsored picnics are currently on hold.",
             image: "images/10475610_354846071383228_7607311383060727136_o.jpeg",
           },
           {
@@ -38,9 +38,9 @@ export const getStaticProps = async () => {
               "images/81514880_1572458986263849_3369518293160296448_n.jpeg",
           },
           {
-            title: "RODEO PICNIC",
+            title: "PAST RODEO PICNICS",
             content:
-              "In the Spring, International Friends holds an annual Rodeo Picnic at about the time of the historic Tucson Rodeo for all IF students and their hosts.  Traditionally held at Reid Park, the picnic features music, dancing, games, food, and fun!",
+              "International Friends previously held Rodeo Picnics for students and hosts around the time of the historic Tucson Rodeo. Traditionally held at Reid Park, these past gatherings featured music, dancing, games, food, and fun. Organization-sponsored picnics are currently on hold.",
             image: "/images/activities_image2.png",
           },
         ],
